@@ -60,7 +60,7 @@ nav a:hover {
     background-color: #505050;  /* Darker shade for hover */
 }
 
-nav a:activeP{
+nav a:active {
     color: #fff;
 }
 
