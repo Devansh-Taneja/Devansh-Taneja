@@ -15,6 +15,7 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px;
+    position:sticky;
 }
 
 .headeraH1 {
@@ -107,8 +108,8 @@ main h3 {
 }
 
 .service-column {
-    flex-basis: calc(25% - 20px);
-    max-width: calc(25% - 20px);
+    flex-basis: calc(50% - 20px);
+    max-width: calc(50% - 20px);
     display: flex;
     flex-direction: column;
     align-items: center;
