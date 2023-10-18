@@ -210,3 +210,8 @@ footer a:hover {
 footer p {
     margin: 10px 0 0;
 }
+
+.fade {
+    animation-name: bounce;
+    animation-duration: 1.0s;
+}
