@@ -33,9 +33,32 @@
 
     <!-- Banner Section -->
     <section class="banner-container">
-      <img src="images/travel banner.svg" alt="Illustrative banner of travel destinations" class="centered-banner" loading="lazy">
-
+      <img name="slide" alt="=BANNER OF TRAVEL DESTINATION" title="TRAVEL DESTINATION"
+      width="70%"/>
     </section>
+
+    <script>
+      let i = 0;
+      const images=[
+        "images/1.jpeg",
+        "images/2.jpeg",
+        "images/3.jpeg",
+        "images/4.jpeg",
+        "images/5.jpeg",
+        "images/6.jpeg",
+        "images/7.jpeg",
+        "images/8.jpeg"
+      ];
+
+      function ChangeImage(){
+        const ImageElement = document.querySelector('[name="slide"]');
+        ImageElement.src = images[i];
+        i = (i + 1) % images.length;
+      }
+      setInterval(ChangeImage, 3500);
+      window.addEventListener('load', ChangeImage);
+    </script>
+
 
     <!-- Main Content Section -->
     <main class="services">
