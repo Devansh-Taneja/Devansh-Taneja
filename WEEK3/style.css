@@ -254,7 +254,7 @@ footer p {
     width: 300px;
     margin: 20vh auto 0 auto; /* This centers the form vertically and 
     horizontally */
-    padding: 20px;
+    padding: 40px;
     background-color: whitesmoke; /* Light gray background for the form */
     border-radius: 4px; /* Rounded corners for the form */
     font-size: 12px;
