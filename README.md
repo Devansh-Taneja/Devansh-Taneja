@@ -1,5 +1,15 @@
 ### Hi there 👋
 
+THIS IS MY REPO FOR F28WP LAB
+
+HERE ARE THE LINKS FOR THE WEBSITE FOR EACH WEEK
+
+WEEK 1 : https://devansh-taneja.github.io/Devansh-Taneja/WEEK1/
+
+WEEK 2 : https://devansh-taneja.github.io/Devansh-Taneja/WEEK2/
+
+WEEK 3 : https://devansh-taneja.github.io/Devansh-Taneja/WEEK3/
+
 <!--
 **Devansh-Taneja/Devansh-Taneja** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
