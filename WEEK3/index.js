@@ -1,99 +1,108 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var form = document.getElementById('MYFORM');
-    var openFormButton = document.getElementById('Openform');
-    var closeFormButton = document.getElementById('closeForm');
+function validateEmail(email) {
+    /* the expression makes it so that we define a set of charecters before the @ sign
+    then define a set of accepted Charecters again then after the  .  there's  another set however
+    the values have been limited between 2 and 4*/
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    openFormButton.addEventListener('click', function() {
-        form.style.display = 'block';
-        openFormButton.style.display = 'none'; // Hide the "Contact Us Now" button
-    });
+    // tests the input follows the expression and return true or false
+    return emailRegex.test(email);
+}
 
-    closeFormButton.addEventListener('click', function() {
-        form.style.display = 'none';
-        openFormButton.style.display = 'block'; // Show the button when the form is closed
-    });
 
-    window.addEventListener('click', function(event) {
-        if (event.target === form) {
-            form.style.display = 'none';
-        }
-    });
 
-    document.getElementById('registration-Form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        validateUsername();
-        validateEmail();
-        validatePassword();
-        validateConfirmPassword();
-    });
+// When the username field is not in focus it checks its validity
+username.addEventListener("blur", function () {
 
-    document.getElementById('username').addEventListener('blur', validateUsername);
-    document.getElementById('email').addEventListener('blur', validateEmail);
-    document.getElementById('password').addEventListener('blur', validatePassword);
-    document.getElementById('confirmPassword').addEventListener('blur', validateConfirmPassword);
+    const username = document.getElementById("username");
+    const username_div = document.getElementById("username_div");
+    // if the username field is empty then display error message and make the border red.
 
-    function validateUsername() {
-        var username = document.getElementById('username').value.trim();
-        var errorElement = document.getElementById('usernameError');
-        var usernameInput = document.getElementById('username');
-
-        if (username === '') {
-            errorElement.textContent = 'Username cannot be empty';
-            usernameInput.classList.add('error');
-        } else {
-            errorElement.textContent = '';
-            usernameInput.classList.remove('error');
-            usernameInput.classList.add('success');
-        }
+    if (username.value.trim() === "") {
+        username_div.className="input-control error"
+        usernameError.textContent = "Username is required";
+    } 
+    // Else make the border green
+    else {
+        username_div.className="input-control success"
+        usernameError.textContent = "";
     }
+});
 
-    function validateEmail() {
-        var email = document.getElementById('email').value.trim();
-        var errorElement = document.getElementById('emailError');
-        var emailInput = document.getElementById('email');
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+email.addEventListener("blur", function () {
 
-        if (email === '') {
-            errorElement.textContent = 'Email cannot be empty';
-            emailInput.classList.add('error');
-        } else if (!emailRegex.test(email)) {
-            errorElement.textContent = 'Invalid email format';
-            emailInput.classList.add('error');
-        } else {
-            errorElement.textContent = '';
-            emailInput.classList.remove('error');
-            emailInput.classList.add('success');
-        }
+    const email = document.getElementById("email");
+    const email_div = document.getElementById("email_div");
+    // if the email field is empty then display error message and make the border red.
+    if (email.value.trim() === "") {
+        email_div.className="input-control error"
+        emailError.textContent = "Email is required";
     }
-
-    function validatePassword() {
-        var password = document.getElementById('password').value;
-        var errorElement = document.getElementById('passwordError');
-        var passwordInput = document.getElementById('password');
-
-        if (password.length < 8) {
-            errorElement.textContent = 'Password must be at least 8 characters long';
-            passwordInput.classList.add('error');
-        } else {
-            errorElement.textContent = '';
-            passwordInput.classList.remove('error');
-            passwordInput.classList.add('success');
-        }
+    // if the email value isnt valid then display error message and make the border red.
+    else if (validateEmail(email.value.trim()) == false){
+        email_div.className="input-control error"
+        emailError.textContent = "Enter Valid Email";
     }
-
-    function validateConfirmPassword() {
-        var password = document.getElementById('password').value;
-        var confirmPassword = document.getElementById('confirmPassword').value;
-        var errorElement = document.getElementById('confirmPasswordError');
-        var confirmPasswordInput = document.getElementById('confirmPassword');
-
-        if (confirmPassword !== password) {
-            errorElement.textContent = 'Passwords do not match';
-            confirmPasswordInput.classList.add('error');
-        } else {
-            errorElement.textContent = '';
-            confirmPasswordInput.classList.remove('error');
-            confirmPasswordInput.classList.add('success');
-        }
+    // Else make the border green
+    else {
+        email_div.className="input-control success"
+        emailError.textContent = "";
     }
+});
+
+password.addEventListener("blur", function () {
+    const password = document.getElementById("password");
+    const password_div = document.getElementById("password_div");
+
+    // if the password field is empty then display error message and make the border red.
+
+    if (password.value.trim() === "") {
+        password_div.className="input-control error"
+        passwordError.textContent = "Password is required";
+    }
+    // if the password length isnt 8 or above then display error message and make the border red.
+    else if (password.value.trim().length <= 7 ){
+        password_div.className="input-control error"
+        passwordError.textContent = "Password is too short";
+    } 
+    // Else make the border green
+    else {
+        password_div.className="input-control success"
+        passwordError.textContent = "";
+    }
+});
+
+password2.addEventListener("blur", function () {
+    const password2 = document.getElementById("password2");
+    const password2_div = document.getElementById("password2_div");
+
+    // if the password2 field is empty then display error message and make the border red.
+    if (password2.value.trim() === "") {
+        password2_div.className="input-control error"
+        password2Error.textContent = "Password is required";
+    }
+    // if the passswords dont match then display error message and make the border red
+    else if(password.value.trim() !== password2.value.trim()){
+        password2_div.className="input-control error"
+        password2Error.textContent = "Password's dont match";
+    }
+    // Else make the border green
+    else {
+        password2_div.className="input-control success"
+        password2Error.textContent = "";
+    }
+});
+
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // if all fields are valid then alert form submitted
+     if (password2_div.className === "input-control success" && password_div.className === "input-control success" && email_div.className === "input-control success" && username_div.className==="input-control success" ){
+        alert("Form submitted successfully");
+     } 
+
+     // Else must be an error and alert to tell them to fix it
+     else{
+        alert("Make sure there are no errors")
+     }
 });

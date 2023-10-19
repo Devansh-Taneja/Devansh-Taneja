@@ -250,11 +250,9 @@ footer p {
 }
 
 
-/* Style for the form: setting width, auto margin for centering, padding,
-background color, border radius for rounded corners, and font size */
-#registration-Form {
+#form {
     width: 300px;
-    margin: 20vh auto 0 auto; /* This centers the form vertically and
+    margin: 20vh auto 0 auto; /* This centers the form vertically and 
     horizontally */
     padding: 20px;
     background-color: whitesmoke; /* Light gray background for the form */
@@ -262,18 +260,18 @@ background color, border radius for rounded corners, and font size */
     font-size: 12px;
     }
     /* Style for the form's heading: setting the text color and alignment */
-    #registration-Form h1 {
+    #form h1 {
     color: #0f2027; /* Dark text color for the heading */
     text-align: center; /* Center-align the heading */
     }
-    /* Style for the form's button: padding, top margin, full width, text color,
+    /* Style for the form's button: padding, top margin, full width, text color, 
     background color, no border, and rounded corners */
-    #registration-Form button {
+    #form button {
     padding: 10px;
     margin-top: 10px; /* Space above the button */
     width: 100%; /* Make the button expand the full width of the form */
     color: white; /* White text color for the button */
-    background-color: rgb(41, 57, 194); /* Blue background color for the button
+    background-color: rgb(41, 57, 194); /* Blue background color for the button 
     */
     border: none; /* Remove the default border */
     border-radius: 4px; /* Rounded corners for the button */
@@ -281,10 +279,10 @@ background color, border radius for rounded corners, and font size */
     /* Container for input fields: using flexbox for layout, column direction */
     .input-control {
     display: flex;
-    flex-direction: column; /* Stack the children (label, input, error message)
+    flex-direction: column; /* Stack the children (label, input, error message) 
     vertically */
     }
-    /* Style for input fields inside the container: border style, rounded corners,
+    /* Style for input fields inside the container: border style, rounded corners, 
     block-level display, font size, padding, full width */
     .input-control input {
     border: 2px solid #f0f0f0; /* Light gray border for the inputs */
