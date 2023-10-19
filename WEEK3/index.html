@@ -131,31 +131,34 @@
       <p>&copy; 2024 Wanderlust Voyages | Travel Agency. All rights reserved.</p>
     </footer>
   </div>
-  <div id="form" style="display: none;">
-    <h1>USER FORM</h1>
-    <form id="registration-form">
-        <div class="input-control">
-            <label for="username">USERNAME</label>
-            <input type="text" id="username" name="username" required>
-            <div class="error" id="username-error"></div>
-        </div>
-        <div class="input-control">
-            <label for="email">EMAIL</label>
-            <input type="email" id="email" name="email" required>
-            <div class="error" id="email-error"></div>
-        </div>
-        <div class="input-control">
-            <label for="password">PASSWORD</label>
-            <input type="password" id="password" name="password" required>
-            <div class="error" id="password-error"></div>
-        </div>
-        <div class="input-control">
-            <label for="confirm-password">CONFIRM PASSWORD</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
-            <div class="error" id="confirm-password-error"></div>
-        </div>
-        <button type="submit">REGISTER</button>
-    </form>
-  </div>
+  <!-- form -->
+  <div id="MYFORM" class="FORM">
+    <div class="FORM-content">
+        <span class="close">&times;</span>
+        <form id="registration-Form">
+            <div class="input-control">
+                <label for="username">USERNAME</label>
+                <input type="text" id="username" name="username" required>
+                <div class="error" id="usernameError"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error" id="emailError"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="password" required>
+                <div class="error" id="passwordError"></div>
+            </div>
+            <div class="input-control">
+                <label for="confirmPassword">CONFIRM PASSWORD </label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <div class="error" id="confirmPasswordError"></div>
+            </div>
+            <button type="submit" class="submit">SUBMIT</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>
