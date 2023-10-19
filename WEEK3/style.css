@@ -74,13 +74,13 @@ nav a:active {
     justify-content: center;
     align-items: center;
     height: auto;
-    width: 100%;
+    width: 70%;
     overflow: hidden;
 }
 
 .centered-banner {
     padding: 30px;
-    max-width: 80%;
+    max-width: 70%;
     height: auto;
 }
 
