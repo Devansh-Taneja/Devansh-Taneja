@@ -290,7 +290,7 @@ footer p {
     display: block; /* Display input field as a block */
     font-size: 12px; /* Text size within the input field */
     padding: 10px; /* Space inside the input field */
-    width: 100%; /* Input field takes up 100% of the form's width */
+    width: 92%; /* Input field takes up 100% of the form's width */
     }
     /* Remove focus outline from input fields */
     .input-control input:focus {
