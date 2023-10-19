@@ -5,10 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     openFormButton.addEventListener('click', function() {
         form.style.display = 'block';
+        openFormButton.style.display = 'none'; // Hide the "Contact Us Now" button
     });
 
     closeFormButton.addEventListener('click', function() {
         form.style.display = 'none';
+        openFormButton.style.display = 'block'; // Show the button when the form is closed
     });
 
     window.addEventListener('click', function(event) {
