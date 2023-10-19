@@ -210,3 +210,65 @@ footer a:hover {
 footer p {
     margin: 10px 0 0;
 }
+/* Style for the form: setting width, auto margin for centering, padding,
+background color, border radius for rounded corners, and font size */
+#form {
+    width: 300px;
+    margin: 20vh auto 0 auto; /* This centers the form vertically and
+    horizontally */
+    padding: 20px;
+    background-color: whitesmoke; /* Light gray background for the form */
+    border-radius: 4px; /* Rounded corners for the form */
+    font-size: 12px;
+    }
+    /* Style for the form's heading: setting the text color and alignment */
+    #form h1 {
+    color: #0f2027; /* Dark text color for the heading */
+    text-align: center; /* Center-align the heading */
+    }
+    /* Style for the form's button: padding, top margin, full width, text color,
+    background color, no border, and rounded corners */
+    #form button {
+    padding: 10px;
+    margin-top: 10px; /* Space above the button */
+    width: 100%; /* Make the button expand the full width of the form */
+    color: white; /* White text color for the button */
+    background-color: rgb(41, 57, 194); /* Blue background color for the button
+    */
+    border: none; /* Remove the default border */
+    border-radius: 4px; /* Rounded corners for the button */
+    }
+    /* Container for input fields: using flexbox for layout, column direction */
+    .input-control {
+    display: flex;
+    flex-direction: column; /* Stack the children (label, input, error message)
+    vertically */
+    }
+    /* Style for input fields inside the container: border style, rounded corners,
+    block-level display, font size, padding, full width */
+    .input-control input {
+    border: 2px solid #f0f0f0; /* Light gray border for the inputs */
+    border-radius: 4px; /* Rounded corners for the inputs */
+    display: block; /* Display input field as a block */
+    font-size: 12px; /* Text size within the input field */
+    padding: 10px; /* Space inside the input field */
+    width: 100%; /* Input field takes up 100% of the form's width */
+    }
+    /* Remove focus outline from input fields */
+    .input-control input:focus {
+    outline: 0; /* Remove outline when input is focused */
+    }
+    /* Style for input fields with class "success": green border */
+    .input-control.success input {
+    border-color: #09c372; /* Green border to indicate successful input */
+    }
+    /* Style for input fields with class "error": red border */
+    .input-control.error input {
+    border-color: #ff3860; /* Red border to indicate an error in input */
+    }
+    /* Style for the error message: text color, font size, and height */
+    .input-control .error {
+    color: #ff3860; /* Red text color for error messages */
+    font-size: 9px; /* Smaller font size for error messages */
+    height: 13px; /* Explicit height to ensure consistent spacing */
+    }
