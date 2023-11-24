@@ -88,17 +88,14 @@ exports.register = (req,res)=>{
         })
 }
 exports.logout=async(req,res)=>{
-    res.cookie('jwt','logout',{
+    res.cookie('jwt','logout',{ 
         expires: new Date(Date.now()+2*1000),
         httpOnly: true
     });
     res.status(200).redirect('/');
 }
 exports.logout = (req, res) => {
-    res.cookie('jwt', 'logout', {
-        expires: new Date(Date.now() + 2*1000),
-        httpOnly: true
-    });
+    res.clearCookie('jwt');
     res.status(200).redirect('/');
 };
 
